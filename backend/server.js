@@ -2,8 +2,11 @@ const express = require('express');
 const app = express();
 const products = require('./data/products')
 const dotenv = require('dotenv');
+const connectDB = require('./config/db.js')
 
 dotenv.config()
+
+connectDB()
 
 app.get("/", (req, res) => {
     res.send("API is running!");
