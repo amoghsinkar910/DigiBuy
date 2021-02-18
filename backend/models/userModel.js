@@ -20,7 +20,7 @@ const userSchema = mongoose.Schema({
         default: false
     }
 },{
-    timestamps: true
+    timestamps: true //arrange in order of arrival of time(latest on top)
 })
 
 const User = mongoose.model('User',userSchema);
